@@ -1,0 +1,54 @@
+nano index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Clothing Collection</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
+        header { text-align: center; padding: 20px; background: #333; color: white; border-radius: 10px; margin-bottom: 20px; }
+        
+        /* Grid Layout */
+        .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        
+        /* Product Card */
+        .card { background: white; border-radius: 10px; width: 250px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card img { width: 100%; height: 300px; object-fit: cover; }
+        .info { padding: 15px; text-align: center; }
+        .info h3 { margin: 10px 0; color: #333; }
+        .price { color: #e44d26; font-weight: bold; font-size: 1.2rem; }
+        .btn { display: inline-block; margin-top: 10px; padding: 8px 15px; background: #333; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Design Studio</h1>
+        <p>Latest Clothing Collection 2024</p>
+    </header>
+
+    <div class="gallery">
+        <div class="card">
+            <img src="images/dress1.jpg" alt="Design 1">
+            <div class="info">
+                <h3>Kurti Design</h3>
+                <p class="price">₹1,200</p>
+                <a href="#" class="btn">View More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/dress2.jpg" alt="Design 2">
+            <div class="info">
+                <h3>Designer Suit</h3>
+                <p class="price">₹2,500</p>
+                <a href="#" class="btn">View More</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
