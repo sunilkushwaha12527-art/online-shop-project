@@ -5,7 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Clothing Collection</title>
     <style>
-        /* Modern Look के लिए Styles */
+ /* 1. एनिमेशन को परिभाषित करना (Defining Animation) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. हेडर पर एनिमेशन लगाना */
+header h1 {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* 3. कार्ड्स को एक-एक करके दिखाने के लिए (Delay Animation) */
+.card {
+    animation: fadeInUp 0.8s ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+/* कार्ड्स बारी-बारी से आएंगे */
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+
+/* 4. इमेज पर चमक (Glow) का असर */
+.card:hover img {
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+       /* Modern Look के लिए Styles */
         body { font-family: 'Poppins', sans-serif; background: #ececec; margin: 0; padding: 20px; }
         
         header { 
